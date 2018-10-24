@@ -85,6 +85,7 @@
                         <br>
                         <?php echo "Telefone:".$funcionario->getTelefone()." "?>
                         <br>
+                        <input type="button" onclick="window.location='valida.php?acao=editarFun';" value="Editar" id="editar" style="background: #725939;">
                     </tr>
             <?php endforeach;?>
         </div>
@@ -100,6 +101,8 @@
                     <?php echo "Validade:".$sorvete->getValidade()." "?>
                     <br>
                     <?php echo "Data de Entrada:".$sorvete->getdataEnt()." "?>
+                    <br>
+                    <input type="button" onclick="window.location='valida.php?acao=editarSor';" value="Editar" id="editar" style="background: #725939;">
                 </tr>
             <?php endforeach;?>
         </div>
@@ -112,6 +115,7 @@
                     <br>
                     <?php echo "Email:".$fornecedor->getEmail()." "?>
                     <br>
+                    <input type="button" onclick="window.location='valida.php?acao=editarFor';" value="Editar" id="editar" style="background: #725939;">
                 </tr>
             <?php endforeach;?>
         </div>

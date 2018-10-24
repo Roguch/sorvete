@@ -68,5 +68,7 @@
                 echo"<script language='javascript' type='text/javascript'>alert('Cadastro Realizado');window.location.href='view/cadastro.php'; </script>";
                 include "view/cadastro.php";
                 break;
+
+            //case 'editar' :
         }
 ?>

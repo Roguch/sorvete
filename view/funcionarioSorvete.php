@@ -72,6 +72,8 @@
                 <?php echo "Validade:".$sorvete->getValidade()." "?>
                 <br>
                 <?php echo "Data de Entrada:".$sorvete->getdataEnt()." "?>
+                <br>
+                <input type="button" onclick="window.location='valida.php?acao=exuir';" value="Excluir" id="excluir" style="background: #725939;">
             </tr>
             <?php endforeach;?>
         </div>
