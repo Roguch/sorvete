@@ -44,6 +44,7 @@
             );
         });
     </script>
+
 </head>
 <body>
 
@@ -73,12 +74,26 @@
                 <br>
                 <?php echo "Data de Entrada:".$sorvete->getdataEnt()." "?>
                 <br>
-                <input type="button" onclick="window.location='valida.php?acao=exuir';" value="Excluir" id="excluir" style="background: #725939;">
+                <button onclick="myFunction()" style="background: #725939;">Excluir</button>
+                <p id="test"></p>
+                <br>
             </tr>
             <?php endforeach;?>
         </div>
 
 
 </div>
+    <script>
+        function myFunction() {
+            var person = prompt("Quantas caixa vai retirar", 1);
+            if (person > 0) {
+                document.getElementById("test").innerHTML =
+                    "Foram retiradas " + person + " caixas";
+                <?php
+                $crudSor->retiraCaixa(person);
+                ?>
+            }
+        }
+    </script>
 </body>
 </html>

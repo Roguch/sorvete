@@ -95,5 +95,9 @@ class CrudSorvete
             $this->conexao->exec($sql);
         }
     }
-
+    public function  retiraCaixa($person){
+        $this->$this->conexao = DBConnection::getConexao();
+        $sql  = "delete from sorvete where quantidade = $person";
+        $this->conexao->exec($sql);
+    }
 }

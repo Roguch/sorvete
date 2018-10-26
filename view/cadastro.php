@@ -71,7 +71,7 @@
 
     <div id="conteudos" style="width: 1885px; height: 905px; padding-left: 10px">
         <div class="conteudo" >
-            <form action="../valida.php?acao=cadastroFun" method="post">
+            <form action="valida.php?acao=cadastroFun" method="post">
                 <input type="number" name="cpf" placeholder="CPF">
                 <br>
                 <input type="email" name="email" placeholder="Elmail">

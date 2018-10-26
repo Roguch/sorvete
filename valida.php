@@ -33,6 +33,7 @@
                 }elseif ($resutado->getTipo_user() == 'funcionario' ){
 
                     $sorvetes     = $crud2->getSorvetes();
+                    $crudSor = new CrudSorvete();
                     include "view/funcionarioSorvete.php";
 
                 }
