@@ -70,6 +70,8 @@
                 include "view/cadastro.php";
                 break;
 
-            //case 'editar' :
+            case 'editar' :
+
+                include "view/editar.php";
         }
 ?>

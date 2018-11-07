@@ -85,7 +85,7 @@
                         <br>
                         <?php echo "Telefone:".$funcionario->getTelefone()." "?>
                         <br>
-                        <input type="button" onclick="window.location='valida.php?acao=editarFun';" value="Editar" id="editar" style="background: #725939;">
+                        <input type="button" onclick="window.location='valida.php?acao=editar';" value="Editar" id="editar" style="background: #725939;">
                     </tr>
             <?php endforeach;?>
         </div>

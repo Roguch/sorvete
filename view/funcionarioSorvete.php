@@ -43,6 +43,11 @@
                 function(){$(this).removeClass("ativa")}
             );
         });
+        function retirar($id,$qunt) {
+            
+
+
+        }
     </script>
 
 </head>
@@ -74,26 +79,12 @@
                 <br>
                 <?php echo "Data de Entrada:".$sorvete->getdataEnt()." "?>
                 <br>
-                <button onclick="myFunction()" style="background: #725939;">Excluir</button>
-                <p id="test"></p>
+                <button onclick="retirar(<?php $sorvete->getID()?>,<?php $sorvete->getQuant()?>)" style="background: #725939;">Excluir</button>
                 <br>
             </tr>
             <?php endforeach;?>
         </div>
 
-
 </div>
-    <script>
-        function myFunction() {
-            var person = prompt("Quantas caixa vai retirar", 1);
-            if (person > 0) {
-                document.getElementById("test").innerHTML =
-                    "Foram retiradas " + person + " caixas";
-                <?php
-                $crudSor->retiraCaixa(person);
-                ?>
-            }
-        }
-    </script>
 </body>
 </html>
