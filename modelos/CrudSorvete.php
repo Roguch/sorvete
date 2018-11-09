@@ -82,22 +82,9 @@ class CrudSorvete
         $this->conexao->exec($sql);
 
     }
-    public function atualizaQuanti($quanti,$id){
+    public function  retiraCaixa($person,$id){
         $this->conexao = DBConnection::getConexao();
-        $sor = new CrudSorvete();
-        $quantiAtual = $sor->getQuanti($id);
-        $quantiNova  = $quantiAtual['quantidade'] - $quanti;
-        if($quantiNova < 0){
-
-            echo 'reirada em exesso limite = '.$quantiAtual['quantidade'];
-        }else {
-            $sql = "UPDATE sorvete SET quantidade = $quantiNova WHERE id = $id";
-            $this->conexao->exec($sql);
-        }
-    }
-    public function  retiraCaixa($person){
-        $this->$this->conexao = DBConnection::getConexao();
-        $sql  = "UPDATE sorvete SET quantidade = $person where id = 1";
+        $sql  = "UPDATE sorvete SET quantidade = $person WHERE id = $id";
         $this->conexao->exec($sql);
     }
 }

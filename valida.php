@@ -72,7 +72,25 @@
 
             case 'retira' :
 
-                $aqui = $_GET['sorId'];
-                echo $aqui;
+                $retirar = $_POST['quanti'] - 1;
+                if ($retirar < 0 ){
+                    echo"<script language='javascript' type='text/javascript'>alert('Não a mais esse sorvete no estoque');</script>";
+                    $sorvetes     = $crud2->getSorvetes();
+                    $crudSor = new CrudSorvete();
+                    include "view/funcionarioSorvete.php";
+                }else {
+                    $crud2->retiraCaixa($retirar, $_POST['id']);
+                    $sorvetes = $crud2->getSorvetes();
+                    $crudSor = new CrudSorvete();
+                    include "view/funcionarioSorvete.php";
+                }
+            case 'deleta':
+                if ($_POST['cpf'] == 'cpf'){
+                    echo $_POST['cpf'].'cpf';
+                }elseif ($_POST['cnpj'] == 'cnpj'){
+                    echo $_POST['cnpj'].'cnpj';
+                }else{
+                    $_POST['id'].'id';
+                }
         }
 ?>
