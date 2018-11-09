@@ -79,7 +79,7 @@
                 <br>
                 <?php echo "Data de Entrada:".$sorvete->getdataEnt()." "?>
                 <br>
-                <button onclick="retirar(<?php $sorvete->getID()?>,<?php $sorvete->getQuant()?>)" style="background: #725939;">Excluir</button>
+                <form action="valida.php?acao=retira" method="post"><input style="background: #725939;" type="submit" value="Retirar"></form>
                 <br>
             </tr>
             <?php endforeach;?>

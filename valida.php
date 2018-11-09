@@ -70,8 +70,9 @@
                 include "view/cadastro.php";
                 break;
 
-            case 'editar' :
+            case 'retira' :
 
-                include "view/editar.php";
+                $aqui = $_GET['sorId'];
+                echo $aqui;
         }
 ?>
