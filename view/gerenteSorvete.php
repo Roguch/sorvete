@@ -44,6 +44,11 @@
               );
         });
     </script>
+    <script language="JavaScript" type="text/javascript">
+        function checkDelete(){
+            return confirm('Você tem realmete certeza que quer fazer isso');
+        }
+    </script>
 </head>
 <body>
 
@@ -88,7 +93,7 @@
                         <input type="button" onclick="window.location='valida.php?acao=editar';" value="Editar" id="editar" style="background: #725939;">
                         <form action="valida.php?acao=deleta" method="post">
                             <input type="hidden" value="<?php echo $funcionario->getCpf()?>" name="cpf">
-                            <input type="submit" value="Excluir" name="excluir">
+                            <input type="submit" value="Deletar" name="deleta" onclick="return checkDelete()">
                         </form>
                     </tr>
             <?php endforeach;?>
@@ -109,7 +114,7 @@
                     <input type="button" onclick="window.location='valida.php?acao=editarSor';" value="Editar" id="editar" style="background: #725939;">
                     <form action="valida.php?acao=deleta" method="post">
                         <input type="hidden" value="<?php echo $sorvete->getId()?>" name="id">
-                        <input type="submit" value="Excluir" name="excluir">
+                        <input type="submit" value="Deletar" name="deleta" onclick="return checkDelete()">
                     </form>
                 </tr>
             <?php endforeach;?>
@@ -126,7 +131,7 @@
                     <input type="button" onclick="window.location='valida.php?acao=editarFor';" value="Editar" id="editar" style="background: #725939;">
                     <form action="valida.php?acao=deleta" method="post">
                         <input type="hidden" value="<?php echo $fornecedor->getCnpj()?>" name="cnpj">
-                        <input type="submit" value="Excluir" name="excluir">
+                        <input type="submit" value="Deletar" name="deleta" onclick="return checkDelete()">
                     </form>
                 </tr>
             <?php endforeach;?>

@@ -85,12 +85,12 @@
                     include "view/funcionarioSorvete.php";
                 }
             case 'deleta':
-                if ($_POST['cpf'] == 'cpf'){
-                    echo $_POST['cpf'].'cpf';
-                }elseif ($_POST['cnpj'] == 'cnpj'){
-                    echo $_POST['cnpj'].'cnpj';
-                }else{
-                    $_POST['id'].'id';
-                }
+
+                $crud->excluirUsuario($_POST['cpf']);
+                $funcionarios = $crud->getUsuarios();
+                $sorvetes     = $crud2->getSorvetes();
+                $fornecedores = $crud3->getFornecedores();
+
+                include "view/gerenteSorvete.php";
         }
 ?>
